@@ -1,0 +1,14 @@
+<div class="thankyouTitle">
+    <h1>Thank you {{name}} for signing our beautiful petition!</h1>
+</div>
+    <div class="thankyouNote">
+        <div class="signaturePic">
+        <img src="{{sig}}" alt="">
+        </div>
+        <a href="/signers">There are {{count}} signers! Check them out!</a>
+        <a href="/edit">Edit your profile</a>
+        <form class="deleteSig" method="post">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <button id="deleteSigBtn" type="submit" name="button">Delete your signature</button>
+        </form>
+</div>

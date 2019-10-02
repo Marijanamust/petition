@@ -1,0 +1,46 @@
+<div class="editTitle">
+    <h1>Edit your profile</h1>
+</div>
+    <div class="editNote">
+        {{#if error}}
+            <div class="error">
+                    OOOOOPS ERROR - you haven't filled in all the required fields properly
+            </div>
+        {{/if}}
+        <form method="post">
+            <p class="requiredField">* Required field</p>
+            <div class="input">
+                <label class="labelText" for="first">First Name <span>*</span></label>
+                <input type="text" name="first" value="{{first}}">
+            </div>
+            <div class="input">
+                <label class="labelText" for="last">Last Name <span>*</span></label>
+                <input type="text" name="last" value="{{last}}">
+            </div>
+            <div class="input">
+                <label class="labelText" for="email">Email address <span>*</span></label>
+                <input type="email" name="email" value="{{email}}">
+            </div>
+            <div class="input">
+                <label class="labelText" for="password">Password </label>
+                <input type="password" name="password">
+            </div>
+            <div class="input">
+                <label class="labelText" for="age" >Age </label>
+                <input type="number" name="age" value="{{age}}">
+            </div>
+            <div class="input">
+                <label class="labelText" for="city" >City </label>
+                <input type="text" name="city" value="{{city}}">
+            </div>
+            <div class="input">
+                <label class="labelText" for="url" >Web Page </label>
+                <input type="text" name="url" value="{{url}}">
+            </div>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <div class="input">
+                <button type="submit" name="button">Update</button>
+            </div>
+        </form>
+    </div>
+</div>

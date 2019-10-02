@@ -1,0 +1,29 @@
+<div class="profilesTitle">
+    <h1>Can you tell us a bit more about yourself {{name}}?</h1>
+</div>
+    <div class="profilesNote">
+        {{#if error}}
+            <div class="error">
+                    OOOOOPS ERROR - you haven't filled in all the required fields properly
+            </div>
+        {{/if}}
+        <form method="post" autocomplete="off">
+            <div class="input">
+                <label class="labelText" for="age">Age</label>
+                <input type="number" name="age">
+            </div>
+            <div class="input">
+                <label class="labelText" for="city">City</label>
+                <input type="text" name="city">
+            </div>
+            <div class="input">
+                <label class="labelText" for="url">Web Page</label>
+                <input type="text" name="url">
+            </div>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <div class="input">
+                <button type="submit" name="button">Continue</button>
+            </div>
+        </form>
+    </div>
+</div>

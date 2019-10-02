@@ -1,0 +1,25 @@
+<div class="loginTitle">
+    <h1>Log in kindly</h1>
+</div>
+    <div class="loginNote">
+        {{#if error}}
+            <div class="error">
+                    OOOOOPS ERROR - you haven't filled in all the required fields properly
+            </div>
+        {{/if}}
+        <form method="post" autocomplete="off">
+            <div class="input">
+                <label class="labelText" for="email">Email address <span>*</span></label>
+                <input type="email" name="email">
+            </div>
+            <div class="input">
+                <label class="labelText" for="password">Password <span>*</span></label>
+                <input type="password" name="password">
+            </div>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <div class="input">
+                <button type="submit" name="button">Login</button>
+            </div>
+        </form>
+
+    </div>

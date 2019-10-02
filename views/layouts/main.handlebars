@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title>Petition</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://kit.fontawesome.com/55ff5507a4.js"></script>
+</head>
+<body>
+    <nav>
+        <p class="vladImgWhite" href="/petition">VLAD</p>
+        <div class="menus">
+            <!-- <p>About</p> -->
+            {{#if loginBtn}}
+            <a href="/login">Login</a>
+            {{/if}}
+            {{#if logoutBtn}}
+            <p>Hi    <a class="name" href="/edit">{{name}}</a></p>
+            <a href="/logout">Logout</a>
+            {{/if}}
+        </div>
+    </nav>
+    <div class="contentBody">
+        {{{body}}}
+    </div>
+
+</body>
+</html>

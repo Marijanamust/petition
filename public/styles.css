@@ -1,0 +1,438 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(space.jpg);
+    background-color: white;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Roboto, Arial, sans-serif;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    background-color: #2e2e2e;
+    color: white;
+    margin: 0px;
+}
+
+.vladImgWhite {
+    font-weight: 800;
+    margin-left: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.menus {
+    display: flex;
+    justify-content: flex-end;
+    width: 500px;
+    margin-right: 15px;
+    margin: 0px;
+    align-items: center;
+}
+
+.menus a,
+.menus p {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.menus a:hover,
+.menus p:hover {
+    color: #ffa028;
+}
+
+.contentBody {
+    width: 100vw;
+}
+
+header {
+    height: 560px;
+    width: 100vw;
+    /* background-image: linear-gradient(
+        153deg,
+        rgba(232, 48, 49, 1) 0%,
+        rgba(179, 24, 92, 1) 16%,
+        rgba(130, 30, 155, 1) 61%
+    ); */
+    background-image: url("vlad.jpg");
+    background-size: cover;
+    margin: 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+}
+.overlay.mainOverlay {
+    height: 560px;
+    width: 100vw;
+    opacity: 0.7;
+}
+header h1 {
+    font-size: 3em;
+    font-weight: 700;
+    z-index: 900;
+}
+header p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    z-index: 900;
+}
+
+header a,
+button {
+    width: 150px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background: #ffa028;
+    border-radius: 3px;
+    margin-top: 30px;
+    padding: 1.125rem 2rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    color: #fefefe;
+    text-decoration: none;
+    z-index: 900;
+}
+
+header a:hover,
+button {
+    background: #ff6900;
+}
+.about {
+    height: 300px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.quotesDiv {
+    background-color: #f4f4f4;
+}
+.quotes {
+    margin-top: 10px;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.quotes img {
+    width: 250px;
+    border-radius: 100%;
+}
+.quotes h3 {
+    font-weight: 700;
+    font-size: 1.875rem;
+}
+.quotes p {
+    font-size: 1rem;
+    font-weight: 200;
+}
+.why {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    background-image: linear-gradient(
+        to right bottom,
+        #f30719,
+        #ff0044,
+        #ff006c,
+        #fc0094,
+        #eb12ba
+    );
+    color: white;
+    height: 400px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+.why h1 {
+    font-weight: 700;
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+}
+ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-left: 1.25rem;
+}
+li {
+    font-size: 1.375rem;
+    position: relative;
+    margin-bottom: 10px;
+    /* padding-left: 1.3em; */
+}
+ul li:before {
+    position: absolute;
+    content: "\f00c";
+    font-family: "FontAwesome";
+    left: -40px;
+    display: inline-block;
+}
+#formDiv {
+    width: 100vw;
+    height: 800px;
+    background: white;
+    color: black;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+#formDiv h3 {
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    font-weight: 400;
+}
+.requiredField {
+    padding-left: 15px;
+    margin: 25px 0;
+    color: red;
+}
+span {
+    color: red;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    margin: 25px 0;
+}
+.labelText {
+    font-weight: 700;
+    color: #828282;
+    margin-bottom: 20px;
+}
+[type="text"],
+[type="password"],
+[type="email"],
+[type="number"],
+[type="search"],
+[type="url"],
+[type="color"] {
+    display: block;
+    box-sizing: border-box;
+    width: 300px;
+    height: 2.5625rem;
+    padding: 0.5rem;
+    border: 2px solid #e5e5e5;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    font-size: 1.125rem;
+    color: #2e2e2e;
+    background-color: #fefefe;
+    border-radius: 4px;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+}
+#loginInRegForm {
+    margin-top: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+#loginInRegForm a {
+    text-decoration: none;
+    color: red;
+}
+.js-paint {
+    border: 2px solid #e5e5e5;
+    background-color: #fefefe;
+    border-radius: 4px;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+}
+.canvasDiv {
+    padding-left: 15px;
+    margin: 25px 0;
+}
+/* THANK YOU PAGE */
+.thankyouTitle,
+.welcomeTitle,
+.loginTitle,
+.profilesTitle,
+.editTitle {
+    background-image: linear-gradient(
+        to right top,
+        #f94b05,
+        #fa4505,
+        #fa3f05,
+        #fb3906,
+        #fb3107,
+        #f8231f,
+        #f4132e,
+        #ef003a,
+        #de0050,
+        #c70062,
+        #aa0070,
+        #880578
+    );
+    color: white;
+    height: 420px;
+    text-align: center;
+    padding-top: 200px;
+}
+.thankyouNote,
+.welcomeNote,
+.loginNote,
+.profilesNote,
+.editNote {
+    margin-top: 20px;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.welcomeBtns {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 400px;
+}
+#clear {
+    margin-left: 20px;
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 16px;
+    padding: 0px;
+    background-color: #ff0044;
+}
+#clear:hover {
+    background-color: #ff6900;
+}
+.signaturePic img {
+    border: 1px solid #ff0044;
+    width: 500px;
+}
+.thankyouNote a {
+    margin-top: 20px;
+    color: #ffa028;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+.thankyouNote a:hover,
+#deleteSigBtn:hover {
+    color: #ff6900;
+}
+#deleteSigBtn {
+    background-color: white;
+    color: #ffa028;
+    width: 200px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: none;
+    margin-top: 10px;
+}
+/* signers */
+.crowdPic {
+    background-image: url("/crowd2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    width: 100vw;
+    opacity: 0.8;
+}
+.overlay {
+    background-image: linear-gradient(
+        to right top,
+        #f94b05,
+        #fa4505,
+        #fa3f05,
+        #fb3906,
+        #c70062,
+        #aa0070,
+        #880578
+    );
+    opacity: 0.7;
+    height: 400px;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.signersNote h1 {
+    align-self: center;
+    color: white;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    text-align: center;
+}
+.signersContainer {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: auto;
+    flex: 1;
+    height: 100%;
+    min-height: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: repeat(auto-fill, 150px);
+    grid-row-gap: 1em;
+}
+.signersDiv {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    word-wrap: break-word;
+}
+.name {
+    border-left: 2px solid #6e0096;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+.signersDiv a,
+.signersDiv p {
+    text-decoration: none;
+    color: black;
+    margin-top: 0px;
+    font-size: 1.1em;
+}
+.signersDiv a:hover {
+    text-decoration: none;
+    color: black;
+}
+/* register is up with thankyou */

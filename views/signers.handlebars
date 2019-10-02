@@ -1,0 +1,20 @@
+<div class="signersNote">
+    <div class="crowdPic"></div>
+    <div class="overlay"></div>
+    <h1>Teacher Vlad's supporters</h1>
+    <div class="signersContainer">
+        {{#signers}}
+        <div class="signersDiv">
+            <div class="name">
+                {{#if url}}
+                <a href="{{url}}" target="_blank">{{first}} {{last}}</a>
+                {{else}}
+                <p>{{first}} {{last}}</p>
+                {{/if}}
+            </div>
+            <p>{{age}}</p>
+            <a href="/signers/{{city}}">{{city}}</a>
+        </div>
+        {{/signers}}
+    </div>
+</div>

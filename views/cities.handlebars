@@ -1,0 +1,24 @@
+<div class="signersNote">
+    <div class="crowdPic"></div>
+    <div class="overlay"></div>
+    {{#if nosigners}}
+        <h1>No professor Vlad's supporters in {{city}}, spread the word!</h1>
+    {{else}}
+        <h1>Professor Vlad's supporters in {{city}}</h1>
+    {{/if}}
+    <div class="signersContainer">
+        {{#signers}}
+        <div class="signersDiv">
+            <div class="name">
+                {{#if url}}
+                <a href="{{url}}" target="_blank">{{first}} {{last}}</a>
+                {{else}}
+                <p>{{first}} {{last}}</p>
+                {{/if}}
+            </div>
+            <p>{{age}}</p>
+            <a href="/signers/{{city}}">{{city}}</a>
+        </div>
+        {{/signers}}
+    </div>
+    </div>

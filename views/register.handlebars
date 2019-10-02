@@ -1,0 +1,75 @@
+<header>
+    <h1>Vlad - a new teacher at SPICED!</h1>
+    <p>Give Vlad recognition he doesn't need but he deserves!</p>
+    <a href="#formDiv">Register</a>
+</header>
+<div class="overlay mainOverlay">
+
+</div>
+<div class="about">
+    <h1>What do we want?</h1>
+    <p>An offical recognition of Vlad's efforts.</p>
+    <p>Honouring Vlad with a SPICED award for Outstanding Achievement in the Category of How To Be A Good Person (And Still Get Your Things Done)</p>
+    <p>Offering Vlad a job position that he is made for</p>
+</div>
+<div class="quotesDiv">
+    <div class="quotes">
+        <img src="gigi.jpeg" alt="">
+        <h3>Vlad was my rock of support, my river of information, my sun of joy. I couldn´t have done it without him.</h3>
+        <p>Giordana The Greatest, a world class impersonator</p>
+    </div>
+    <div class="quotes">
+        <img src="rachel.jpg" alt="">
+        <h3>Vlad has helped me to achieve heights I never knew were possible</h3>
+        <p>Rachel, an over-achiever and a puppy lover</p>
+    </div>
+    <div class="quotes">
+        <img src="guy.jpg" alt="">
+        <h3>Vlad is great.</h3>
+        <p>Tom, a life-coach</p>
+    </div>
+</div>
+
+<div class="why">
+    <h1>Why Vlad?</h1>
+    <ul>
+        <li>Because he takes time to explain, even when time is not what he has at all</li>
+        <li>Because he's always there for his colleagues when they hit the wall</li>
+        <li>Because he answers questions and questions, even when he's dead</li>
+        <li>Because he stays longer, even though he could do the gym instead</li>
+        <li>Because he'd rather help everyone than finish first</li>
+        <li>Because he'll make sure that nobody feels the worst</li>
+    </ul>
+</div>
+<div id="formDiv">
+    <h3>Register</h3>
+    {{#if error}}
+        <div class="error">
+                OOOOOPS ERROR - you haven't filled in all the required fields properly
+        </div>
+    {{/if}}
+    <form method="post" autocomplete="off">
+        <p>* Required field</p>
+        <div class="input">
+            <label class="labelText" for="first">First Name <span>*</span></label>
+            <input type="text" name="first" required>
+        </div>
+        <div class="input">
+            <label class="labelText" for="last">Last Name <span>*</span></label>
+            <input type="text" name="last" required>
+        </div>
+        <div class="input">
+            <label class="labelText" for="email">Email address <span>*</span></label>
+            <input type="email" name="email" required>
+        </div>
+        <div class="input">
+            <label class="labelText" for="password">Password <span>*</span></label>
+            <input type="password" name="password" required>
+        </div>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <div class="input">
+            <button type="submit" name="button">Register</button>
+        </div>
+    </form>
+    <div id="loginInRegForm">If you are already a member, please <a href="/login">LOGIN</a>
+</div>

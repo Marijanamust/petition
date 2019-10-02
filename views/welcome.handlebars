@@ -1,0 +1,28 @@
+<div class="welcomeTitle">
+    <h1>Spiced with Vlad is within reach but we won't get there without your support. </h1>
+    <h2>Join our campaign today!</h2>
+</div>
+<div class="welcomeNote">
+    <div class="formDiv">
+        <h3>Sign the petition</h3>
+        {{#if error}}
+            <div class="error">
+                    OOOOOPS ERROR - you haven't filled in all the required fields properly
+            </div>
+        {{/if}}
+        <form method="post" autocomplete="off">
+            <input type="hidden" class="hidden" name="signature" value="">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <div class="canvasDiv">
+                <div class="labelText">Your signature</div>
+                <canvas class="js-paint  paint-canvas" width="600" height="200"></canvas>
+            </div>
+            <div class="input welcomeBtns">
+                <button type="submit" name="button">Submit</button>
+                <button type="button" name="clear" id="clear">Clear</button>
+            </div>
+        </form>
+    </div>
+</div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="/script.js"></script>
