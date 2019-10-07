@@ -1,9 +1,7 @@
-# Dry Seasons
-
-![Welcome Screenshot](/public/welcome-ss.png)
+# Online petition - Vlad for a teacher!
 
 An online petition that I created in [Spiced Academy](https://www.spiced-academy.com/) bootcamp as one of the assignments.
-The petition was created as a praise to one of my schoolmates for his altruistic efforts in helping everyone that couldn't catch up with the curriculum, up to a point where he would gather them in after-school hours to explain, and therefore sacrificed his own valuable time, that was scarce during the bootcamp. I wanted the school to know about his efforts so the petition was created based on their own website and the title was Vlad - a new teacher at Spiced!
+The petition was created as a praise to one of my schoolmates for his selfless efforts in helping everyone that couldn't catch up with the curriculum, up to a point where he would gather them after school to explain, and therefore sacrificed his own valuable time, that was scarce during the bootcamp. I wanted the school to know about his efforts so the petition was created based on their own website and the title was Vlad - a new teacher at Spiced!
 
 ## Table of contents
 
