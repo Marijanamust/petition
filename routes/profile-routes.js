@@ -20,7 +20,6 @@ router.get("/register", isLogged, (req, res) => {
 });
 
 router.post("/register", isLogged, (req, res) => {
-    // console.log("req.body ", req.body);
     if (!req.body.password) {
         res.render("register", {
             error: true
@@ -29,13 +28,12 @@ router.post("/register", isLogged, (req, res) => {
         hash(req.body.password).then(hash => {
             addRegister(req.body.first, req.body.last, req.body.email, hash)
                 .then(data => {
-                    console.log("Data: ", data);
                     req.session.user = {
                         name: data[0].first,
                         user_id: data[0].id,
                         canAddInfo: true
                     };
-                    // console.log("USer: ", req.session.user);
+
                     res.redirect("/profiles");
                 })
                 .catch(error => {
@@ -55,12 +53,11 @@ router.get("/profiles", isNotLogged, canAddInfo, (req, res) => {
         layout: "main"
     });
 });
-// isNotLogged, hasSigned,
+
 router.post("/profiles", isNotLogged, canAddInfo, (req, res) => {
     let url = checkUrl(req.body.url);
     addData(req.body.age, req.body.city, url, req.session.user.user_id)
         .then(() => {
-            // console.log(data);
             req.session.user.canAddInfo = false;
             res.redirect("/petition");
         })
@@ -73,11 +70,8 @@ router.post("/profiles", isNotLogged, canAddInfo, (req, res) => {
 });
 
 router.get("/edit", isNotLogged, (req, res) => {
-    console.log("USER ID", req.session.user.user_id);
     getEditData(req.session.user.user_id)
         .then(data => {
-            console.log("this is for edit:", data);
-
             res.render("edit", {
                 first: data[0].first,
                 last: data[0].last,

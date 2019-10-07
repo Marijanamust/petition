@@ -1,7 +1,7 @@
 const express = require("express");
-// const app = express();
 const hb = require("express-handlebars");
 const cookieSession = require("cookie-session");
+const { cookieSecret } = require("./secrets.json");
 const csurf = require("csurf");
 const { router: profileRouter } = require("./routes/profile-routes");
 const { router: logRouter } = require("./routes/log-routes");
@@ -18,7 +18,7 @@ app.use(
 );
 app.use(
     cookieSession({
-        secret: `I'm always angry.`,
+        secret: cookieSecret,
         maxAge: 1000 * 60 * 60 * 24 * 14
     })
 );
@@ -34,25 +34,6 @@ app.use(express.static("./public"));
 app.use(profileRouter);
 app.use(logRouter);
 app.use(petitionRouter);
-
-app.get("/home", (req, res) => {
-    res.send("<h1>Welcome home</h1>");
-});
-
-app.get("/welcome", (req, res) => {
-    console.log("req.session: ", req.session);
-    if (req.session.fakeCookieForDemo) {
-        res.send("<h1>you have a cookie</h1>");
-    } else {
-        res.redirect("/home");
-    }
-});
-
-app.post("/welcome", (req, res) => {
-    req.session.wentToWelcome = "yeap";
-    console.log("req.session: ", req.session);
-    res.redirect("/home");
-});
 
 if (require.main === module) {
     app.listen(process.env.PORT || 8080, () => console.log("Im listening"));

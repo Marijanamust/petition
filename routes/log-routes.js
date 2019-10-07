@@ -19,7 +19,7 @@ router.post("/login", (req, res) => {
                         user_id: data.id,
                         name: data.first
                     };
-                    console.log(req.session.user);
+
                     getSignature(req.session.user.user_id)
                         .then(data => {
                             req.session.signatureId = data[0].id;

@@ -1,7 +1,4 @@
 const spicedPg = require("spiced-pg");
-// const { dbuser, dbpass } = require("../secrets.json");
-// const db = spicedPg(`postgres:${dbuser}:${dbpass}@localhost:5432/petition`);
-// this is authorization, you can put in protocol usernam pass
 
 let db;
 if (process.env.DATABASE_URL) {

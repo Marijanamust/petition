@@ -15,8 +15,6 @@ const {
     getCitySigners
 } = require("../utils/db.js");
 
-// const { checkUrl } = require("../utils/repetitive");
-
 router.get("/", (req, res) => {
     res.redirect("/register");
 });
@@ -31,7 +29,6 @@ router.get("/petition", isNotLogged, hasSigned, (req, res) => {
 });
 
 router.post("/petition", isNotLogged, hasSigned, (req, res) => {
-    // console.log("signature and id", req.session.user.user_id);
     addSigner(req.body.signature, req.session.user.user_id)
         .then(id => {
             req.session.signatureId = id;
@@ -46,7 +43,7 @@ router.post("/petition", isNotLogged, hasSigned, (req, res) => {
 });
 
 router.get("/thankyou", hasNotSigned, isNotLogged, (req, res) => {
-    // console.log(req.session.user);
+    //
     getSignature(req.session.user.user_id)
         .then(sig => {
             getNumber().then(count => {
@@ -65,10 +62,8 @@ router.get("/thankyou", hasNotSigned, isNotLogged, (req, res) => {
 });
 
 router.post("/thankyou", hasNotSigned, (req, res) => {
-    // console.log("My user ID", req.session.user.user_id);
     deleteSignature(req.session.user.user_id)
         .then(() => {
-            // console.log("ITs OK", req.session.user.user_id),
             req.session.signatureId = null;
             res.redirect("/petition");
         })
